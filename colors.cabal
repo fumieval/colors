@@ -22,4 +22,4 @@ source-repository head
 library
   exposed-modules:     Data.Color, Data.Color.Names, Data.Color.Class
   -- other-modules:       
-  build-depends:       base ==4.*, profunctors ==3.*
+  build-depends:       base ==4.*, profunctors >= 3 && < 5
