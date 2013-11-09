@@ -22,7 +22,8 @@ import Data.String
 import Data.Char
 import Data.Color.Class
 
--- | A color that has red, green, blue, alpha as its component.
+-- | A color that has red, green, blue, alpha as its components.
+-- It is an instance of 'HasRGB' so there are some lenses to tweak individual components.
 data Color = Color Float Float Float Float deriving (Show, Read, Eq, Ord)
 
 instance HasRGB Color where

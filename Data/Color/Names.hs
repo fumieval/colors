@@ -16,6 +16,9 @@ import Data.Color.Class
 white :: HasRGB a => a
 white = fromRGB 1.0 1.0 1.0
 
+gray :: HasRGB a => a
+gray = fromRGB 0.5 0.5 0.5
+
 black :: HasRGB a => a
 black = fromRGB 0.0 0.0 0.0
 
