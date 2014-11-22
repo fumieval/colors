@@ -70,7 +70,7 @@ instance IsString RGBA where
     fromString x = error $ "Invalid color representation: " ++ x
 
 -- | Blend two colors.
-blend :: Num a => Float -> RGBA -> RGBA -> RGBA
+blend :: Float -> RGBA -> RGBA -> RGBA
 blend t (RGBA r0 g0 b0 a0) (RGBA r1 g1 b1 a1) = RGBA
     (r0 * (1 - t) + r1 * t)
     (g0 * (1 - t) + g1 * t)
