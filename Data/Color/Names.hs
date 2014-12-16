@@ -13,29 +13,29 @@
 module Data.Color.Names where
 import Data.Color.Class
 
-white :: HasRGB a => a
+white :: (HasRGB f, RealFrac a) => f a
 white = fromRGB 1.0 1.0 1.0
 
-gray :: HasRGB a => a
+gray :: (HasRGB f, RealFrac a) => f a
 gray = fromRGB 0.5 0.5 0.5
 
-black :: HasRGB a => a
+black :: (HasRGB f, RealFrac a) => f a
 black = fromRGB 0.0 0.0 0.0
 
-red :: HasRGB a => a
+red :: (HasRGB f, RealFrac a) => f a
 red = fromRGB 1.0 0.0 0.0
 
-green :: HasRGB a => a
+green :: (HasRGB f, RealFrac a) => f a
 green = fromRGB 0.0 1.0 0.0
 
-blue :: HasRGB a => a
+blue :: (HasRGB f, RealFrac a) => f a
 blue = fromRGB 0.0 0.0 1.0
 
-yellow :: HasRGB a => a
+yellow :: (HasRGB f, RealFrac a) => f a
 yellow = fromRGB 1.0 1.0 0.0
 
-cyan :: HasRGB a => a
+cyan :: (HasRGB f, RealFrac a) => f a
 cyan = fromRGB 0.0 1.0 1.0
 
-magenta :: HasRGB a => a
+magenta :: (HasRGB f, RealFrac a) => f a
 magenta = fromRGB 1.0 0.0 1.0
