@@ -48,9 +48,9 @@ instance HasRGB V4 where
 
 instance HasHSB V4 where
     fromHSB h s v = hsv_rgb h s v (argb 1.0)
-    _Hue f (RGBA r g b a) = rgb_hsv r g b $ \h s v -> fmap (\h' -> hsv_rgb h' s v (argb a)) (f h)
-    _Saturation f (RGBA r g b a) = rgb_hsv r g b $ \h s v -> fmap (\s' -> hsv_rgb h s' v (argb a)) (f s)
-    _Brightness f (RGBA r g b a) = rgb_hsv r g b $ \h s v -> fmap (\v' -> hsv_rgb h s v' (argb a)) (f v)
+    _Hue f (V4 r g b a) = rgb_hsv r g b $ \h s v -> fmap (\h' -> hsv_rgb h' s v (argb a)) (f h)
+    _Saturation f (V4 r g b a) = rgb_hsv r g b $ \h s v -> fmap (\s' -> hsv_rgb h s' v (argb a)) (f s)
+    _Brightness f (V4 r g b a) = rgb_hsv r g b $ \h s v -> fmap (\v' -> hsv_rgb h s v' (argb a)) (f v)
 
 instance HasAlpha V4 where
     _Alpha = _w
