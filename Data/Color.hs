@@ -67,7 +67,7 @@ blend :: (Functor f, Additive f, Num a) => a -> f a -> f a -> f a
 blend t a b = (1 - t) *^ a ^+^ t *^ b
 
 argb :: a -> a -> a -> a -> V4 a
-argb a r g b = RGBA r g b a
+argb a r g b = V4 r g b a
 
 rgb_hsv :: RealFrac a => a -> a -> a -> (a -> a -> a -> r) -> r
 rgb_hsv r g b f = f h (s / maxC) maxC where
